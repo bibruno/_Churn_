@@ -1,8 +1,10 @@
 ![ML_Churn](https://i.imgur.com/N83Awuu.gif)
 
-# Previsão de Churn de Clientes com TensorFlow
+# Previsão de Churn de Clientes com Ranndom Forest
 
-Este projeto tem como objetivo prever o **churn de clientes** (quando um cliente desiste da compra) usando um modelo de aprendizado profundo desenvolvido com **TensorFlow**. A partir de dados simulados, o modelo é treinado para identificar padrões que indicam se um cliente completará ou não uma compra, com base em várias características do cliente e interações com o e-commerce.
+Um modelo de classificação é desenvolvido usando RandomForestClassifier com o objetivo de prever a probabilidade de churn de clientes. Para garantir que o modelo lide efetivamente com o desbalanceamento entre as classes (clientes que completam a compra vs. clientes que não completam), a técnica de class_weight='balanced' é aplicada, ajustando os pesos das classes durante o treinamento.
+
+O pipeline de processamento inclui a leitura dos dados de um arquivo CSV, a verificação de valores ausentes e o pré-processamento das variáveis categóricas usando OneHotEncoder. Após a preparação dos dados, o modelo é treinado e avaliado, gerando relatórios de classificação e matrizes de confusão, além de visualizações das curvas ROC e Precision-Recall para medir o desempenho.
 
 ## Estrutura do Projeto
 
